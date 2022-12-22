@@ -1,0 +1,117 @@
+nyc_info <- read_excel("nyc_info.xlsx")
+> View(nyc_info)                                                                                                   
+> library(readxl)
+> NYC_DATA <- read_excel("NYC_DATA.xlsx")
+> View(NYC_DATA)                                                                                                        
+> hist(NYC_DATA$Deaths)
+> hist(NYC_DATA$Deaths, main = "Deaths in NY", xlab = "Deaths", ylab = "Frequency")
+> hist(NYC_DATA$`Death Rate`, main = "Deaths in NY", xlab = "Deaths", ylab = "Frequency")
+> hist(NYC_DATA$`Death Rate`, main = "Deaths Rate in NY", xlab = "Death Rate", ylab = "Frequency")
+> hist(NYC_DATA$`Age Adjusted Death Rate`, main = "Age Adjusted Death Rate in NY", xlab = "Death Rate", ylab = "Frequency")
+> barplot(table(NYC_DATA$Sex))
+> barplot(table(NYC_DATA$Sex), main = "Comparing number of Male and Female", ylab = "frequency", xlab = "Female and Male"
++ 
++ barplot(table(NYC_DATA$Sex))
+Error: unexpected symbol in:
+"
+barplot"
+> barplot(table(NYC_DATA$Sex))
+> barplot(table(NYC_DATA$Sex), main = "Comparing number of Male and Female", ylab = "frequency", xlab = "Female and Male")
+> mean(NYC_DATA$Deaths)
+[1] 589.2614
+> median(NYC_DATA$Deaths)
+[1] 208
+> var(NYC_DATA$Deaths)
+[1] 793854.4
+> sd(NYC_DATA$Deaths)
+[1] 890.9851
+> mean(NYC_DATA$`Death Rate`)
+[1] 52.96932
+> median(NYC_DATA$`Death Rate`)
+[1] 19.35
+> var(NYC_DATA$`Death Rate`)
+[1] 5001.802
+> sd(NYC_DATA$`Death Rate`)
+[1] 70.72342
+> plot(NYC_DATA$Deaths, NYC_DATA$`Death Rate`)
+> plot(NYC_DATA$`Death Rate`, NYC_DATA$Deaths)
+> plot(NYC_DATA$Deaths, NYC_DATA$`Death Rate`)
+> boxplot(NYC_DATA$`Death Rate`)
+> cor(NYC_DATA$Deaths, NYC_DATA$`Death Rate`)
+[1] 0.968983
+> plot(NYC_DATA$Deaths, NYC_DATA$`Death Rate`)
+> plot(NYC_DATA$Deaths, NYC_DATA$`Death Rate`, main = "Graph Showing Death Rate vs Deaths In NYC", xlab = "Deaths", ylab = "Death Rate")
+> mean(NYC_DATA$Deaths, trim = 0.05)
+[1] 461.9
+> length(NYC_DATA$Deaths)
+[1] 88
+> sample.mean <- mean(NYC_DATA$Deaths)
+> sample.n <- length(NYC_DATA$Deaths)
+> sampl.cd <- sd(NYC_DATA$Deaths)
+> sample.se <- sampl.cd/sqrt(sample.n)
+> alpha = 0.05
+> degrees.freedom = sample.n - 1
+> t.score = qt(p=alpha/2, df=degrees.freedom, lower.tail = F)
+> margin.error <- t.score * sample.se
+> lower.bound <- sample.mean - margin.error
+> upper.bound <- sample.mean + margin.error
+> print(c(lower.bound, upper.bound))
+[1] 400.4797 778.0431
+> hist(NYC_DATA$`Age Adjusted Death Rate`, main = "Age Adjusted Death Rate in NY", xlab = "Death Rate", ylab = "Frequency")
+> barplot(table(NYC_DATA$Sex), main = "Comparing number of Male and Female", ylab = "frequency", xlab = "Female and Male")
+> mean(NYC_DATA$Deaths)
+[1] 589.2614
+> median(NYC_DATA$Deaths)
+[1] 208
+> var(NYC_DATA$Deaths)
+[1] 793854.4
+> sd(NYC_DATA$Deaths)
+[1] 890.9851
+> sd(NYC_DATA$Deaths)
+[1] 890.9851
+> mean(NYC_DATA$`Death Rate`)
+[1] 52.96932
+> median(NYC_DATA$`Death Rate`)
+[1] 19.35
+> var(NYC_DATA$`Death Rate`)
+[1] 5001.802
+> sd(NYC_DATA$`Death Rate`)
+[1] 70.72342
+> cor(NYC_DATA$Deaths, NYC_DATA$`Death Rate`)
+[1] 0.968983
+> cor(NYC_DATA$`Death Rate`, NYC_DATA$Deaths)
+[1] 0.968983
+> quantile(NYC_DATA$Deaths, probs = c(o.95))
+Error in quantile.default(NYC_DATA$Deaths, probs = c(o.95)) : 
+  object 'o.95' not found
+> quantile(NYC_DATA$Deaths, probs = c(0.95))
+    95% 
+2471.95 
+> quantile(NYC_DATA$Deaths, probs = c(0.97))
+    97% 
+3146.29 
+> quantile(NYC_DATA$Deaths, probs = c(0.99))
+    99% 
+4057.21 
+> print(upper.bound)
+[1] 778.0431
+> print(lower.bound)
+[1] 400.4797
+> quantile(NYC_DATA$Deaths, probs = c(0.80))
+  80% 
+943.8 
+> sample.mean <- mean(NYC_DATA$`Death Rate`)
+> sample.n <- length(NYC_DATA$`Death Rate`)
+> sample.sd <- sd(NYC_DATA$`Death Rate`)
+> sample.se <- sample.sd/sqrt(sample.n)
+> degrees.freedom = sample.n - 1
+> degrees.freedom = sample.n - 1
+> t.score = qt(p=alpha/2, df=degrees.freedom,lower.tail = F)
+> t.score = qt(p=alpha/2, df=degrees.freedom,lower.tail = F)
+> t.scores = qt(p=alpha/2, df=degrees.freedom,lower.tail = F)
+> t.score = qt(p=alpha/2, df=degrees.freedom,lower.tail = F)
+> margin.error <- t.score * sample.se
+> lower.bound <- sample.mean - margin.error
+> upper.bound <- sample.mean + margin.error
+> print(c(lower.bound, upper.bound))
+[1] 37.98446 67.95418
