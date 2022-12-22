@@ -1,0 +1,7 @@
+barplot(table(NYC_DATA$Sex), main = "Comparing number of Male and Female", ylab = "frequency", xlab = "Female and Male")
+
+hist(NYC_DATA$`Age Adjusted Death Rate`, main = "Age Adjusted Death Rate in NY", xlab = "Death Rate", ylab = "Frequency")
+
+hist(NYC_DATA$`Death Rate`, main = "Deaths Rate in NY", xlab = "Death Rate", ylab = "Frequency")
+
+hist(NYC_DATA$Deaths, main = "Deaths in NY", xlab = "Deaths", ylab = "Frequency")
